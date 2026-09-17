@@ -1,0 +1,746 @@
+[
+  {
+    "id": "maple-coffee",
+    "name": "Coffee and pastry pair",
+    "merchant": "Caf\u00e9 Maple",
+    "category": "Food & Dining",
+    "value": "$8",
+    "image": "/images/food.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 7,
+    "businessPriority": 6,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Coffee and pastry pair",
+      "$8",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "sunrise-lunch",
+    "name": "Lunch set discount",
+    "merchant": "Sunrise Kitchen",
+    "category": "Food & Dining",
+    "value": "20% off",
+    "image": "/images/food.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 14,
+    "businessPriority": 7,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Lunch set discount",
+      "20% off",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "berry-dessert",
+    "name": "Dessert for two",
+    "merchant": "Berry Lane",
+    "category": "Food & Dining",
+    "value": "$12",
+    "image": "/images/food.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 21,
+    "businessPriority": 8,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Dessert for two",
+      "$12",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "skytrail-pass",
+    "name": "Weekend travel pass",
+    "merchant": "Skytrail",
+    "category": "Travel & Roaming",
+    "value": "$15",
+    "image": "/images/travel.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 7,
+    "businessPriority": 6,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Weekend travel pass",
+      "$15",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "harbor-stay",
+    "name": "City escape discount",
+    "merchant": "Harbor House",
+    "category": "Travel & Roaming",
+    "value": "15% off",
+    "image": "/images/travel.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 14,
+    "businessPriority": 7,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "City escape discount",
+      "15% off",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "cloud-roam",
+    "name": "Three-day roaming pack",
+    "merchant": "CloudRoute",
+    "category": "Travel & Roaming",
+    "value": "$9",
+    "image": "/images/travel.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 21,
+    "businessPriority": 8,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Three-day roaming pack",
+      "$9",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "pixel-pass",
+    "name": "One-month game pass",
+    "merchant": "Pixel Grove",
+    "category": "Gaming & Tech",
+    "value": "$6",
+    "image": "/images/tech.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 7,
+    "businessPriority": 6,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "One-month game pass",
+      "$6",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "orbit-gear",
+    "name": "Accessory discount",
+    "merchant": "Orbit Works",
+    "category": "Gaming & Tech",
+    "value": "10% off",
+    "image": "/images/tech.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 14,
+    "businessPriority": 7,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Accessory discount",
+      "10% off",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "byte-course",
+    "name": "Creative coding course",
+    "merchant": "Byte Studio",
+    "category": "Gaming & Tech",
+    "value": "$18",
+    "image": "/images/tech.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 21,
+    "businessPriority": 8,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Creative coding course",
+      "$18",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "lumen-cinema",
+    "name": "Two cinema tickets",
+    "merchant": "Lumen Cinema",
+    "category": "Entertainment & Streaming",
+    "value": "$16",
+    "image": "/images/entertainment.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 7,
+    "businessPriority": 6,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Two cinema tickets",
+      "$16",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "frame-stream",
+    "name": "One-month streaming pass",
+    "merchant": "Frame Club",
+    "category": "Entertainment & Streaming",
+    "value": "$7",
+    "image": "/images/entertainment.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 14,
+    "businessPriority": 7,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "One-month streaming pass",
+      "$7",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "echo-show",
+    "name": "Live music discount",
+    "merchant": "Echo Hall",
+    "category": "Entertainment & Streaming",
+    "value": "20% off",
+    "image": "/images/entertainment.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 21,
+    "businessPriority": 8,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Live music discount",
+      "20% off",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "meadow-yoga",
+    "name": "Introductory yoga class",
+    "merchant": "Meadow Studio",
+    "category": "Sports & Wellness",
+    "value": "$10",
+    "image": "/images/wellness.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 7,
+    "businessPriority": 6,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Introductory yoga class",
+      "$10",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "stride-run",
+    "name": "Running essentials discount",
+    "merchant": "Stride Supply",
+    "category": "Sports & Wellness",
+    "value": "15% off",
+    "image": "/images/wellness.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 14,
+    "businessPriority": 7,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Running essentials discount",
+      "15% off",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "calm-pool",
+    "name": "Pool day pass",
+    "merchant": "Calm Springs",
+    "category": "Sports & Wellness",
+    "value": "$8",
+    "image": "/images/wellness.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 21,
+    "businessPriority": 8,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Pool day pass",
+      "$8",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "loop-lounge",
+    "name": "Member lounge visit",
+    "merchant": "Loop Collective",
+    "category": "Membership & Exclusive",
+    "value": "$12",
+    "image": "/images/membership.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 7,
+    "businessPriority": 6,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Member lounge visit",
+      "$12",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "atelier-preview",
+    "name": "Early collection preview",
+    "merchant": "Atelier North",
+    "category": "Membership & Exclusive",
+    "value": "Early access",
+    "image": "/images/membership.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 14,
+    "businessPriority": 7,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Early collection preview",
+      "Early access",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "circle-session",
+    "name": "Member workshop",
+    "merchant": "Circle Works",
+    "category": "Membership & Exclusive",
+    "value": "$14",
+    "image": "/images/membership.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 21,
+    "businessPriority": 8,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Member workshop",
+      "$14",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "confetti-treat",
+    "name": "Birthday dessert box",
+    "merchant": "Confetti House",
+    "category": "Birthday & Seasonal",
+    "value": "$9",
+    "image": "/images/birthday.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 7,
+    "businessPriority": 6,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Birthday dessert box",
+      "$9",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "seasonal-picnic",
+    "name": "Seasonal picnic discount",
+    "merchant": "Weekend Meadow",
+    "category": "Birthday & Seasonal",
+    "value": "15% off",
+    "image": "/images/birthday.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 14,
+    "businessPriority": 7,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Seasonal picnic discount",
+      "15% off",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "paper-gift",
+    "name": "Celebration stationery set",
+    "merchant": "Paper Moon",
+    "category": "Birthday & Seasonal",
+    "value": "$11",
+    "image": "/images/birthday.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 21,
+    "businessPriority": 8,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Celebration stationery set",
+      "$11",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "willow-credit",
+    "name": "Store credit",
+    "merchant": "Willow Market",
+    "category": "Shopping & Savings",
+    "value": "$5",
+    "image": "/images/shopping.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 7,
+    "businessPriority": 6,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Store credit",
+      "$5",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "canvas-bag",
+    "name": "Everyday bag discount",
+    "merchant": "Canvas Corner",
+    "category": "Shopping & Savings",
+    "value": "20% off",
+    "image": "/images/shopping.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 14,
+    "businessPriority": 7,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Everyday bag discount",
+      "20% off",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  },
+  {
+    "id": "nest-home",
+    "name": "Home essentials discount",
+    "merchant": "Nest & Co",
+    "category": "Shopping & Savings",
+    "value": "10% off",
+    "image": "/images/shopping.svg",
+    "fundingType": "Partner-funded",
+    "costBand": "Low",
+    "availability": "Available",
+    "eligibleTiers": [
+      "Basic",
+      "Plus",
+      "Elite"
+    ],
+    "channels": [
+      "In-app",
+      "Push",
+      "SMS",
+      "Email"
+    ],
+    "expiresInDays": 21,
+    "businessPriority": 8,
+    "explorationEligible": true,
+    "approvedClaims": [
+      "Home essentials discount",
+      "10% off",
+      "Fictional portfolio offer"
+    ],
+    "terms": "Demonstration only. No real purchase, payment or reward is available."
+  }
+]

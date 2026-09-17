@@ -1,0 +1,8 @@
+# Analysis assets are not needed by the Next.js application at runtime.
+Data Analysis/
+
+# Local-only state and environments.
+.runtime/
+.venv/
+**/.venv/
+**/__pycache__/

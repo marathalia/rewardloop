@@ -1,0 +1,16 @@
+node_modules
+.next/
+.env*
+.runtime/
+.vercel/
+*.tsbuildinfo
+.DS_Store
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+Data Analysis/reports/
+Data Analysis/output/
+*.pem
+*.key
+*.log
+.Rhistory

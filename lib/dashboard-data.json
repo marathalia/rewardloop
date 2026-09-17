@@ -1,0 +1,611 @@
+{
+  "source": {
+    "file": "synthetic_events.csv",
+    "sizeMB": 4.15,
+    "generatedAt": "2025-02-15T00:00:00Z",
+    "timezone": "Simulated local time",
+    "grain": "One generated app event per row; one customer per clustering row.",
+    "funnelValidatedAt": "Recomputed from synthetic events",
+    "isSynthetic": true,
+    "seed": 1729
+  },
+  "dataset": {
+    "totalEvents": 54823,
+    "uniqueUsers": 1800,
+    "sessions": 6465,
+    "dateRange": "2025-01-01 to 2025-02-14",
+    "minDate": "2025-01-01",
+    "maxDate": "2025-02-14",
+    "days": 45
+  },
+  "quality": {
+    "exactDuplicateRows": 0,
+    "exactDuplicateShare": 0,
+    "duplicateEventKeys": 0,
+    "networkLineTypeMissingShare": 0,
+    "cleanScreenCoverage": 100,
+    "missingEventDates": []
+  },
+  "clusterModel": {
+    "method": "K-Means on synthetic behavioral measures",
+    "variant": "Six groups for interpretation",
+    "clusters": 6,
+    "coverage": 100,
+    "sampleSilhouette": 0.5335180973930025,
+    "selectionSilhouette": 0.5573677949221555,
+    "inertiaPerCustomer": 2.7580592867903264,
+    "comparedKValues": 6,
+    "seedAgreement": 1.0,
+    "features": 11
+  },
+  "clusters": [
+    {
+      "id": "home",
+      "name": "Casual Browsers",
+      "shortName": "Casual Browsers",
+      "users": 343,
+      "percent": 19.06,
+      "color": "#0f766e",
+      "behaviour": "Synthetic group with relatively prominent home activity.",
+      "signals": [
+        "Home events: 51.4% of customer activity"
+      ],
+      "rewardTypes": "Test offers against category evidence",
+      "channel": "In-app / Push",
+      "tone": "Clear and helpful",
+      "toneExample": "A reward selected for your next visit.",
+      "avgEvents": 11.69,
+      "avgSessions": 2.94,
+      "avgActiveDays": 2.87,
+      "dealClickRate": 3.87,
+      "dealDetailShare": 5.54,
+      "voucherShare": 0.0,
+      "campaignShare": 0.0,
+      "topDrivers": [
+        "home_share"
+      ]
+    },
+    {
+      "id": "voucher",
+      "name": "Voucher Trackers",
+      "shortName": "Voucher Trackers",
+      "users": 287,
+      "percent": 15.94,
+      "color": "#2563eb",
+      "behaviour": "Synthetic group with relatively prominent voucher activity.",
+      "signals": [
+        "Voucher events: 60.9% of customer activity"
+      ],
+      "rewardTypes": "Test offers against category evidence",
+      "channel": "In-app / Push",
+      "tone": "Clear and helpful",
+      "toneExample": "A reward selected for your next visit.",
+      "avgEvents": 24.57,
+      "avgSessions": 4.92,
+      "avgActiveDays": 4.68,
+      "dealClickRate": 3.62,
+      "dealDetailShare": 5.31,
+      "voucherShare": 60.86,
+      "campaignShare": 0.0,
+      "topDrivers": [
+        "voucher_share"
+      ]
+    },
+    {
+      "id": "detail",
+      "name": "Deal Comparers",
+      "shortName": "Deal Comparers",
+      "users": 282,
+      "percent": 15.67,
+      "color": "#d97706",
+      "behaviour": "Synthetic group with relatively prominent detail activity.",
+      "signals": [
+        "Detail events: 19.9% of customer activity"
+      ],
+      "rewardTypes": "Test offers against category evidence",
+      "channel": "In-app / Push",
+      "tone": "Clear and helpful",
+      "toneExample": "A reward selected for your next visit.",
+      "avgEvents": 104.67,
+      "avgSessions": 5.0,
+      "avgActiveDays": 4.74,
+      "dealClickRate": 19.63,
+      "dealDetailShare": 19.87,
+      "voucherShare": 0.0,
+      "campaignShare": 0.0,
+      "topDrivers": [
+        "detail_share"
+      ]
+    },
+    {
+      "id": "skimmer",
+      "name": "Single-Glance Bouncers",
+      "shortName": "Single-Glance Bouncers",
+      "users": 292,
+      "percent": 16.22,
+      "color": "#7c3aed",
+      "behaviour": "Synthetic group with relatively prominent dashboard activity.",
+      "signals": [
+        "Dashboard events: 86.8% of customer activity"
+      ],
+      "rewardTypes": "Test offers against category evidence",
+      "channel": "In-app / Push",
+      "tone": "Clear and helpful",
+      "toneExample": "A reward selected for your next visit.",
+      "avgEvents": 2.43,
+      "avgSessions": 1.99,
+      "avgActiveDays": 1.97,
+      "dealClickRate": 0.18,
+      "dealDetailShare": 8.22,
+      "voucherShare": 0.0,
+      "campaignShare": 0.0,
+      "topDrivers": [
+        "dashboard_share"
+      ]
+    },
+    {
+      "id": "campaign",
+      "name": "Trigger Responders",
+      "shortName": "Trigger Responders",
+      "users": 288,
+      "percent": 16.0,
+      "color": "#be185d",
+      "behaviour": "Synthetic group with relatively prominent campaign activity.",
+      "signals": [
+        "Campaign events: 59.8% of customer activity"
+      ],
+      "rewardTypes": "Test offers against category evidence",
+      "channel": "In-app / Push",
+      "tone": "Clear and helpful",
+      "toneExample": "A reward selected for your next visit.",
+      "avgEvents": 20.78,
+      "avgSessions": 3.04,
+      "avgActiveDays": 2.96,
+      "dealClickRate": 6.09,
+      "dealDetailShare": 7.17,
+      "voucherShare": 0.0,
+      "campaignShare": 59.78,
+      "topDrivers": [
+        "campaign_share"
+      ]
+    },
+    {
+      "id": "membership",
+      "name": "Status Seekers",
+      "shortName": "Status Seekers",
+      "users": 308,
+      "percent": 17.11,
+      "color": "#475569",
+      "behaviour": "Synthetic group with relatively prominent membership activity.",
+      "signals": [
+        "Membership events: 63.4% of customer activity"
+      ],
+      "rewardTypes": "Test offers against category evidence",
+      "channel": "In-app / Push",
+      "tone": "Clear and helpful",
+      "toneExample": "A reward selected for your next visit.",
+      "avgEvents": 24.51,
+      "avgSessions": 3.82,
+      "avgActiveDays": 3.7,
+      "dealClickRate": 4.65,
+      "dealDetailShare": 5.5,
+      "voucherShare": 0.0,
+      "campaignShare": 0.0,
+      "topDrivers": [
+        "membership_share"
+      ]
+    }
+  ],
+  "dailyEvents": [
+    {
+      "date": "2025-01-01",
+      "events": 1177
+    },
+    {
+      "date": "2025-01-02",
+      "events": 1183
+    },
+    {
+      "date": "2025-01-03",
+      "events": 1363
+    },
+    {
+      "date": "2025-01-04",
+      "events": 1235
+    },
+    {
+      "date": "2025-01-05",
+      "events": 1287
+    },
+    {
+      "date": "2025-01-06",
+      "events": 1150
+    },
+    {
+      "date": "2025-01-07",
+      "events": 1321
+    },
+    {
+      "date": "2025-01-08",
+      "events": 1041
+    },
+    {
+      "date": "2025-01-09",
+      "events": 1065
+    },
+    {
+      "date": "2025-01-10",
+      "events": 1333
+    },
+    {
+      "date": "2025-01-11",
+      "events": 1180
+    },
+    {
+      "date": "2025-01-12",
+      "events": 1178
+    },
+    {
+      "date": "2025-01-13",
+      "events": 1323
+    },
+    {
+      "date": "2025-01-14",
+      "events": 1198
+    },
+    {
+      "date": "2025-01-15",
+      "events": 1217
+    },
+    {
+      "date": "2025-01-16",
+      "events": 1408
+    },
+    {
+      "date": "2025-01-17",
+      "events": 1183
+    },
+    {
+      "date": "2025-01-18",
+      "events": 1074
+    },
+    {
+      "date": "2025-01-19",
+      "events": 1484
+    },
+    {
+      "date": "2025-01-20",
+      "events": 1402
+    },
+    {
+      "date": "2025-01-21",
+      "events": 1256
+    },
+    {
+      "date": "2025-01-22",
+      "events": 1046
+    },
+    {
+      "date": "2025-01-23",
+      "events": 1092
+    },
+    {
+      "date": "2025-01-24",
+      "events": 1330
+    },
+    {
+      "date": "2025-01-25",
+      "events": 1152
+    },
+    {
+      "date": "2025-01-26",
+      "events": 1278
+    },
+    {
+      "date": "2025-01-27",
+      "events": 1164
+    },
+    {
+      "date": "2025-01-28",
+      "events": 1224
+    },
+    {
+      "date": "2025-01-29",
+      "events": 1219
+    },
+    {
+      "date": "2025-01-30",
+      "events": 1021
+    },
+    {
+      "date": "2025-01-31",
+      "events": 1168
+    },
+    {
+      "date": "2025-02-01",
+      "events": 1230
+    },
+    {
+      "date": "2025-02-02",
+      "events": 1194
+    },
+    {
+      "date": "2025-02-03",
+      "events": 1191
+    },
+    {
+      "date": "2025-02-04",
+      "events": 1248
+    },
+    {
+      "date": "2025-02-05",
+      "events": 1264
+    },
+    {
+      "date": "2025-02-06",
+      "events": 1342
+    },
+    {
+      "date": "2025-02-07",
+      "events": 1379
+    },
+    {
+      "date": "2025-02-08",
+      "events": 1186
+    },
+    {
+      "date": "2025-02-09",
+      "events": 1074
+    },
+    {
+      "date": "2025-02-10",
+      "events": 1120
+    },
+    {
+      "date": "2025-02-11",
+      "events": 1161
+    },
+    {
+      "date": "2025-02-12",
+      "events": 1383
+    },
+    {
+      "date": "2025-02-13",
+      "events": 1196
+    },
+    {
+      "date": "2025-02-14",
+      "events": 1103
+    }
+  ],
+  "funnelStages": [
+    {
+      "stage": "Rewards Dashboard",
+      "value": 6465,
+      "percent": 100.0,
+      "display": "6,465"
+    },
+    {
+      "stage": "Deal Listing",
+      "value": 3880,
+      "percent": 60.02,
+      "display": "3,880"
+    },
+    {
+      "stage": "Deal Click",
+      "value": 2460,
+      "percent": 38.05,
+      "display": "2,460"
+    },
+    {
+      "stage": "Deal Detail",
+      "value": 2264,
+      "percent": 35.02,
+      "display": "2,264"
+    },
+    {
+      "stage": "Redeem Screen",
+      "value": 539,
+      "percent": 8.34,
+      "display": "539"
+    }
+  ],
+  "categoryEngagement": [
+    {
+      "category": "Birthday & Seasonal",
+      "events": 2831,
+      "users": 297,
+      "sessions": 521,
+      "dealClicks": 1046,
+      "value": 14.35
+    },
+    {
+      "category": "Gaming & Tech",
+      "events": 2757,
+      "users": 304,
+      "sessions": 530,
+      "dealClicks": 973,
+      "value": 13.97
+    },
+    {
+      "category": "Shopping & Savings",
+      "events": 2531,
+      "users": 319,
+      "sessions": 523,
+      "dealClicks": 918,
+      "value": 12.83
+    },
+    {
+      "category": "Travel & Roaming",
+      "events": 2450,
+      "users": 263,
+      "sessions": 460,
+      "dealClicks": 912,
+      "value": 12.42
+    },
+    {
+      "category": "Membership & Exclusive",
+      "events": 2356,
+      "users": 283,
+      "sessions": 471,
+      "dealClicks": 839,
+      "value": 11.94
+    },
+    {
+      "category": "Entertainment & Streaming",
+      "events": 2290,
+      "users": 258,
+      "sessions": 472,
+      "dealClicks": 811,
+      "value": 11.6
+    },
+    {
+      "category": "Sports & Wellness",
+      "events": 2285,
+      "users": 270,
+      "sessions": 462,
+      "dealClicks": 804,
+      "value": 11.58
+    },
+    {
+      "category": "Food & Dining",
+      "events": 2233,
+      "users": 271,
+      "sessions": 444,
+      "dealClicks": 829,
+      "value": 11.32
+    }
+  ],
+  "dealConcentration": {
+    "top10": 45.85,
+    "top20": 85.87,
+    "namedDealClicks": 7132
+  },
+  "unavailableJourney": {
+    "sessions": 230,
+    "endedAtUnavailable": 198,
+    "droppedAfter": 86.09
+  },
+  "topDeals": [
+    {
+      "name": "Seasonal picnic discount",
+      "category": "Birthday & Seasonal",
+      "events": 1045,
+      "users": 150,
+      "sessions": 183,
+      "dealClicks": 399
+    },
+    {
+      "name": "Creative coding course",
+      "category": "Gaming & Tech",
+      "events": 947,
+      "users": 138,
+      "sessions": 172,
+      "dealClicks": 354
+    },
+    {
+      "name": "Birthday dessert box",
+      "category": "Birthday & Seasonal",
+      "events": 941,
+      "users": 137,
+      "sessions": 174,
+      "dealClicks": 346
+    },
+    {
+      "name": "Three-day roaming pack",
+      "category": "Travel & Roaming",
+      "events": 882,
+      "users": 117,
+      "sessions": 160,
+      "dealClicks": 333
+    },
+    {
+      "name": "One-month game pass",
+      "category": "Gaming & Tech",
+      "events": 904,
+      "users": 137,
+      "sessions": 178,
+      "dealClicks": 311
+    },
+    {
+      "name": "Accessory discount",
+      "category": "Gaming & Tech",
+      "events": 906,
+      "users": 133,
+      "sessions": 180,
+      "dealClicks": 308
+    },
+    {
+      "name": "Store credit",
+      "category": "Shopping & Savings",
+      "events": 841,
+      "users": 142,
+      "sessions": 180,
+      "dealClicks": 308
+    },
+    {
+      "name": "Everyday bag discount",
+      "category": "Shopping & Savings",
+      "events": 842,
+      "users": 136,
+      "sessions": 162,
+      "dealClicks": 306
+    },
+    {
+      "name": "Home essentials discount",
+      "category": "Shopping & Savings",
+      "events": 848,
+      "users": 142,
+      "sessions": 181,
+      "dealClicks": 304
+    },
+    {
+      "name": "Early collection preview",
+      "category": "Membership & Exclusive",
+      "events": 832,
+      "users": 129,
+      "sessions": 164,
+      "dealClicks": 301
+    },
+    {
+      "name": "One-month streaming pass",
+      "category": "Entertainment & Streaming",
+      "events": 801,
+      "users": 125,
+      "sessions": 163,
+      "dealClicks": 301
+    },
+    {
+      "name": "Coffee and pastry pair",
+      "category": "Food & Dining",
+      "events": 790,
+      "users": 114,
+      "sessions": 151,
+      "dealClicks": 301
+    },
+    {
+      "name": "Celebration stationery set",
+      "category": "Birthday & Seasonal",
+      "events": 845,
+      "users": 125,
+      "sessions": 164,
+      "dealClicks": 301
+    },
+    {
+      "name": "City escape discount",
+      "category": "Travel & Roaming",
+      "events": 786,
+      "users": 113,
+      "sessions": 143,
+      "dealClicks": 296
+    },
+    {
+      "name": "Member lounge visit",
+      "category": "Membership & Exclusive",
+      "events": 847,
+      "users": 127,
+      "sessions": 168,
+      "dealClicks": 295
+    }
+  ]
+}

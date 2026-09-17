@@ -1,0 +1,553 @@
+{
+  "model": {
+    "method": "Catalogue category scores on synthetic events",
+    "scope": "Separate descriptive layer; no category inputs in clustering",
+    "minimumScore": 6,
+    "minimumSignalEvents": 2,
+    "minimumTopShare": 55,
+    "minimumMargin": 15,
+    "categories": [
+      "Food & Dining",
+      "Travel & Roaming",
+      "Gaming & Tech",
+      "Entertainment & Streaming",
+      "Sports & Wellness",
+      "Membership & Exclusive",
+      "Birthday & Seasonal",
+      "Shopping & Savings"
+    ],
+    "interactionWeights": {
+      "click": 2,
+      "detail": 3,
+      "voucher": 4,
+      "redeem": 4
+    }
+  },
+  "coverage": {
+    "customers": 1800,
+    "knownCustomers": 698,
+    "knownShare": 38.78,
+    "learningCustomers": 1102,
+    "learningShare": 61.22,
+    "noSignalCustomers": 500,
+    "ambiguousCustomers": 602,
+    "classifiedEvents": 19503,
+    "classifiedEventShare": 35.57
+  },
+  "clusters": [
+    {
+      "id": "learning",
+      "name": "Learning",
+      "description": "Insufficient or mixed evidence under the demo rules.",
+      "push": "Test a relevant offer; measure outcomes separately.",
+      "examples": [
+        "Choose interests",
+        "Explore categories"
+      ],
+      "customers": 1102,
+      "share": 61.22,
+      "avgSignalEvents": 5.78,
+      "avgScore": 16.74,
+      "avgTopShare": 40.77,
+      "avgMargin": 31.79
+    },
+    {
+      "id": "food",
+      "name": "Food & Dining",
+      "description": "Recorded interactions with fictional food & dining offers.",
+      "push": "Test a relevant offer; measure outcomes separately.",
+      "examples": [
+        "Coffee and pastry pair",
+        "Lunch set discount",
+        "Dessert for two"
+      ],
+      "customers": 80,
+      "share": 4.44,
+      "avgSignalEvents": 18.5,
+      "avgScore": 51.9,
+      "avgTopShare": 88.12,
+      "avgMargin": 77.6
+    },
+    {
+      "id": "travel",
+      "name": "Travel & Roaming",
+      "description": "Recorded interactions with fictional travel & roaming offers.",
+      "push": "Test a relevant offer; measure outcomes separately.",
+      "examples": [
+        "Weekend travel pass",
+        "City escape discount",
+        "Three-day roaming pack"
+      ],
+      "customers": 77,
+      "share": 4.28,
+      "avgSignalEvents": 23.38,
+      "avgScore": 65.31,
+      "avgTopShare": 88.34,
+      "avgMargin": 79.49
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming & Tech",
+      "description": "Recorded interactions with fictional gaming & tech offers.",
+      "push": "Test a relevant offer; measure outcomes separately.",
+      "examples": [
+        "One-month game pass",
+        "Accessory discount",
+        "Creative coding course"
+      ],
+      "customers": 85,
+      "share": 4.72,
+      "avgSignalEvents": 19.58,
+      "avgScore": 58.36,
+      "avgTopShare": 89.5,
+      "avgMargin": 81.89
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment & Streaming",
+      "description": "Recorded interactions with fictional entertainment & streaming offers.",
+      "push": "Test a relevant offer; measure outcomes separately.",
+      "examples": [
+        "Two cinema tickets",
+        "One-month streaming pass",
+        "Live music discount"
+      ],
+      "customers": 81,
+      "share": 4.5,
+      "avgSignalEvents": 16.91,
+      "avgScore": 49.96,
+      "avgTopShare": 88.69,
+      "avgMargin": 78.66
+    },
+    {
+      "id": "wellness",
+      "name": "Sports & Wellness",
+      "description": "Recorded interactions with fictional sports & wellness offers.",
+      "push": "Test a relevant offer; measure outcomes separately.",
+      "examples": [
+        "Introductory yoga class",
+        "Running essentials discount",
+        "Pool day pass"
+      ],
+      "customers": 86,
+      "share": 4.78,
+      "avgSignalEvents": 17.13,
+      "avgScore": 49.57,
+      "avgTopShare": 89.02,
+      "avgMargin": 78.95
+    },
+    {
+      "id": "membership",
+      "name": "Membership & Exclusive",
+      "description": "Recorded interactions with fictional membership & exclusive offers.",
+      "push": "Test a relevant offer; measure outcomes separately.",
+      "examples": [
+        "Member lounge visit",
+        "Early collection preview",
+        "Member workshop"
+      ],
+      "customers": 90,
+      "share": 5.0,
+      "avgSignalEvents": 18.5,
+      "avgScore": 53.6,
+      "avgTopShare": 88.66,
+      "avgMargin": 79.36
+    },
+    {
+      "id": "seasonal",
+      "name": "Birthday & Seasonal",
+      "description": "Recorded interactions with fictional birthday & seasonal offers.",
+      "push": "Test a relevant offer; measure outcomes separately.",
+      "examples": [
+        "Birthday dessert box",
+        "Seasonal picnic discount",
+        "Celebration stationery set"
+      ],
+      "customers": 93,
+      "share": 5.17,
+      "avgSignalEvents": 21.27,
+      "avgScore": 59.7,
+      "avgTopShare": 85.92,
+      "avgMargin": 73.36
+    },
+    {
+      "id": "savings",
+      "name": "Shopping & Savings",
+      "description": "Recorded interactions with fictional shopping & savings offers.",
+      "push": "Test a relevant offer; measure outcomes separately.",
+      "examples": [
+        "Store credit",
+        "Everyday bag discount",
+        "Home essentials discount"
+      ],
+      "customers": 106,
+      "share": 5.89,
+      "avgSignalEvents": 16.09,
+      "avgScore": 46.02,
+      "avgTopShare": 89.65,
+      "avgMargin": 80.25
+    }
+  ],
+  "behaviorPreferenceSummary": [
+    {
+      "behaviorCluster": "Casual Browsers",
+      "customers": 343,
+      "learningShare": 83.67,
+      "topPreferences": [
+        {
+          "name": "Food & Dining",
+          "customers": 10,
+          "share": 2.92
+        },
+        {
+          "name": "Shopping & Savings",
+          "customers": 9,
+          "share": 2.62
+        },
+        {
+          "name": "Entertainment & Streaming",
+          "customers": 7,
+          "share": 2.04
+        }
+      ]
+    },
+    {
+      "behaviorCluster": "Deal Comparers",
+      "customers": 282,
+      "learningShare": 31.21,
+      "topPreferences": [
+        {
+          "name": "Birthday & Seasonal",
+          "customers": 32,
+          "share": 11.35
+        },
+        {
+          "name": "Shopping & Savings",
+          "customers": 26,
+          "share": 9.22
+        },
+        {
+          "name": "Membership & Exclusive",
+          "customers": 26,
+          "share": 9.22
+        }
+      ]
+    },
+    {
+      "behaviorCluster": "Single-Glance Bouncers",
+      "customers": 292,
+      "learningShare": 98.63,
+      "topPreferences": [
+        {
+          "name": "Membership & Exclusive",
+          "customers": 1,
+          "share": 0.34
+        },
+        {
+          "name": "Gaming & Tech",
+          "customers": 1,
+          "share": 0.34
+        },
+        {
+          "name": "Sports & Wellness",
+          "customers": 1,
+          "share": 0.34
+        }
+      ]
+    },
+    {
+      "behaviorCluster": "Status Seekers",
+      "customers": 308,
+      "learningShare": 59.09,
+      "topPreferences": [
+        {
+          "name": "Shopping & Savings",
+          "customers": 25,
+          "share": 8.12
+        },
+        {
+          "name": "Entertainment & Streaming",
+          "customers": 22,
+          "share": 7.14
+        },
+        {
+          "name": "Sports & Wellness",
+          "customers": 20,
+          "share": 6.49
+        }
+      ]
+    },
+    {
+      "behaviorCluster": "Trigger Responders",
+      "customers": 288,
+      "learningShare": 55.21,
+      "topPreferences": [
+        {
+          "name": "Shopping & Savings",
+          "customers": 22,
+          "share": 7.64
+        },
+        {
+          "name": "Membership & Exclusive",
+          "customers": 22,
+          "share": 7.64
+        },
+        {
+          "name": "Birthday & Seasonal",
+          "customers": 17,
+          "share": 5.9
+        }
+      ]
+    },
+    {
+      "behaviorCluster": "Voucher Trackers",
+      "customers": 287,
+      "learningShare": 34.15,
+      "topPreferences": [
+        {
+          "name": "Gaming & Tech",
+          "customers": 31,
+          "share": 10.8
+        },
+        {
+          "name": "Membership & Exclusive",
+          "customers": 26,
+          "share": 9.06
+        },
+        {
+          "name": "Shopping & Savings",
+          "customers": 24,
+          "share": 8.36
+        }
+      ]
+    }
+  ],
+  "sampleProfiles": [
+    {
+      "customerId": "SYN-00008",
+      "behaviorCluster": "Trigger Responders",
+      "preferenceCluster": "Birthday & Seasonal",
+      "topPreference": "Birthday & Seasonal",
+      "secondPreference": "Membership & Exclusive",
+      "topShare": 64.29,
+      "margin": 28.57,
+      "signalEvents": 5,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00039",
+      "behaviorCluster": "Voucher Trackers",
+      "preferenceCluster": "Birthday & Seasonal",
+      "topPreference": "Birthday & Seasonal",
+      "secondPreference": "Gaming & Tech",
+      "topShare": 76.47,
+      "margin": 52.94,
+      "signalEvents": 13,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00001",
+      "behaviorCluster": "Trigger Responders",
+      "preferenceCluster": "Entertainment & Streaming",
+      "topPreference": "Entertainment & Streaming",
+      "secondPreference": "Food & Dining",
+      "topShare": 73.68,
+      "margin": 47.37,
+      "signalEvents": 7,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00052",
+      "behaviorCluster": "Deal Comparers",
+      "preferenceCluster": "Entertainment & Streaming",
+      "topPreference": "Entertainment & Streaming",
+      "secondPreference": "Travel & Roaming",
+      "topShare": 85.12,
+      "margin": 70.24,
+      "signalEvents": 66,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00017",
+      "behaviorCluster": "Trigger Responders",
+      "preferenceCluster": "Food & Dining",
+      "topPreference": "Food & Dining",
+      "secondPreference": "Travel & Roaming",
+      "topShare": 100.0,
+      "margin": 100.0,
+      "signalEvents": 5,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00028",
+      "behaviorCluster": "Status Seekers",
+      "preferenceCluster": "Food & Dining",
+      "topPreference": "Food & Dining",
+      "secondPreference": "Travel & Roaming",
+      "topShare": 100.0,
+      "margin": 100.0,
+      "signalEvents": 5,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00049",
+      "behaviorCluster": "Deal Comparers",
+      "preferenceCluster": "Gaming & Tech",
+      "topPreference": "Gaming & Tech",
+      "secondPreference": "Food & Dining",
+      "topShare": 100.0,
+      "margin": 100.0,
+      "signalEvents": 53,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00057",
+      "behaviorCluster": "Status Seekers",
+      "preferenceCluster": "Gaming & Tech",
+      "topPreference": "Gaming & Tech",
+      "secondPreference": "Food & Dining",
+      "topShare": 100.0,
+      "margin": 100.0,
+      "signalEvents": 4,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00003",
+      "behaviorCluster": "Single-Glance Bouncers",
+      "preferenceCluster": "Learning",
+      "topPreference": "Birthday & Seasonal",
+      "secondPreference": "Food & Dining",
+      "topShare": 100.0,
+      "margin": 100.0,
+      "signalEvents": 2,
+      "learningReason": "insufficient_or_mixed_evidence"
+    },
+    {
+      "customerId": "SYN-00004",
+      "behaviorCluster": "Casual Browsers",
+      "preferenceCluster": "Learning",
+      "topPreference": "Food & Dining",
+      "secondPreference": "Travel & Roaming",
+      "topShare": 0.0,
+      "margin": 0.0,
+      "signalEvents": 0,
+      "learningReason": "no_category_signal"
+    },
+    {
+      "customerId": "SYN-00016",
+      "behaviorCluster": "Status Seekers",
+      "preferenceCluster": "Membership & Exclusive",
+      "topPreference": "Membership & Exclusive",
+      "secondPreference": "Gaming & Tech",
+      "topShare": 75.0,
+      "margin": 50.0,
+      "signalEvents": 8,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00029",
+      "behaviorCluster": "Casual Browsers",
+      "preferenceCluster": "Membership & Exclusive",
+      "topPreference": "Membership & Exclusive",
+      "secondPreference": "Food & Dining",
+      "topShare": 100.0,
+      "margin": 100.0,
+      "signalEvents": 3,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00002",
+      "behaviorCluster": "Casual Browsers",
+      "preferenceCluster": "Shopping & Savings",
+      "topPreference": "Shopping & Savings",
+      "secondPreference": "Food & Dining",
+      "topShare": 100.0,
+      "margin": 100.0,
+      "signalEvents": 3,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00018",
+      "behaviorCluster": "Status Seekers",
+      "preferenceCluster": "Shopping & Savings",
+      "topPreference": "Shopping & Savings",
+      "secondPreference": "Food & Dining",
+      "topShare": 100.0,
+      "margin": 100.0,
+      "signalEvents": 3,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00032",
+      "behaviorCluster": "Deal Comparers",
+      "preferenceCluster": "Sports & Wellness",
+      "topPreference": "Sports & Wellness",
+      "secondPreference": "Gaming & Tech",
+      "topShare": 71.54,
+      "margin": 44.62,
+      "signalEvents": 51,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00105",
+      "behaviorCluster": "Status Seekers",
+      "preferenceCluster": "Sports & Wellness",
+      "topPreference": "Sports & Wellness",
+      "secondPreference": "Food & Dining",
+      "topShare": 100.0,
+      "margin": 100.0,
+      "signalEvents": 3,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00020",
+      "behaviorCluster": "Voucher Trackers",
+      "preferenceCluster": "Travel & Roaming",
+      "topPreference": "Travel & Roaming",
+      "secondPreference": "Gaming & Tech",
+      "topShare": 58.54,
+      "margin": 17.07,
+      "signalEvents": 12,
+      "learningReason": "graduated"
+    },
+    {
+      "customerId": "SYN-00024",
+      "behaviorCluster": "Voucher Trackers",
+      "preferenceCluster": "Travel & Roaming",
+      "topPreference": "Travel & Roaming",
+      "secondPreference": "Food & Dining",
+      "topShare": 100.0,
+      "margin": 100.0,
+      "signalEvents": 20,
+      "learningReason": "graduated"
+    }
+  ],
+  "learningExperiments": [
+    {
+      "name": "Choose interests",
+      "design": "Offer a choice of fictional reward categories",
+      "signal": "Selected category",
+      "next": "Compare stated choices with later interactions"
+    },
+    {
+      "name": "Try different rewards",
+      "design": "Randomise one eligible exploration slot",
+      "signal": "Views and clicks per exposure",
+      "next": "Compare with a control group"
+    },
+    {
+      "name": "Compare message styles",
+      "design": "Keep the offer fixed and vary the copy",
+      "signal": "Clicks per message exposure",
+      "next": "Estimate the difference between groups"
+    },
+    {
+      "name": "Learn from later activity",
+      "design": "Revisit preferences after more events",
+      "signal": "New category evidence",
+      "next": "Recalculate the same evidence rules"
+    }
+  ],
+  "graduationRule": "At least two category events, top score 6, top share 55%, and margin 15 percentage points (waived at top share 75%).",
+  "caveat": "Entirely synthetic data. Category scores and group labels demonstrate a method; they do not establish real customer preferences or business lift."
+}
