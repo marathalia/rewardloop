@@ -346,7 +346,7 @@ export function CampaignGeneratorPage() {
             </Card>
 
             {generation && <>
-              <div className="flex flex-wrap items-center gap-2 rounded-xl border border-primary/20 bg-primary/5 p-3 text-sm"><Sparkles className="size-4 text-primary" /><span className="font-semibold">{generation.provider}</span><Badge variant="success">Basic copy checks: {generation.guardrailStatus}</Badge>{generation.warning && <span className="text-xs text-muted-foreground">{generation.warning}</span>}</div>
+              <div className="flex flex-wrap items-center gap-2 rounded-xl border border-primary/20 bg-primary/5 p-3 text-sm"><Sparkles className="size-4 text-primary" /><span className="font-semibold">{generation.provider}</span><Badge variant={generation.guardrailStatus === "passed" ? "success" : "outline"}>{generation.guardrailStatus === "passed" ? "AI copy checks passed" : "Catalogue template"}</Badge><span className="text-xs text-muted-foreground">Images: {generation.imageProvider ?? "Static reward image"}</span>{generation.warning && <span className="text-xs text-muted-foreground">{generation.warning}</span>}</div>
               <Card>
                 <CardHeader><CardTitle className="flex items-center gap-2"><ImageIcon className="size-4 text-primary" />3. Review campaign previews</CardTitle></CardHeader>
                 <CardContent className="space-y-8">

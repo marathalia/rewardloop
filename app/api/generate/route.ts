@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+import { campaignValidationIssues } from "@/lib/campaign-validation"
 import { appendRewardLoopEvent } from "@/lib/event-store"
 import { getReward, type Channel } from "@/lib/mvp-engine"
 
@@ -31,7 +32,7 @@ function safeFallback(rewardName: string, value: string, merchant: string): Gene
     posterBadge: "MY REWARDLOOP EXCLUSIVE",
     visualDirection: `Feature the ${merchant} reward prominently using a clean, energetic RewardLoop-teal campaign template.`,
     inApp: `A ${merchant} reward matched to your recent Rewards activity is ready. View the demo details before claiming.`,
-    push: `${rewardName} is ready in the RewardLoop app. View the demo details before it expires.`,
+    push: `${rewardName} is ready in the RewardLoop app. View the demo details.`,
     sms: `RewardLoop: Your ${rewardName} (${value} value) is ready in the RewardLoop app. Terms apply. Reply STOP to opt out.`,
     emailSubject: `A ${merchant} reward selected for you`,
     emailBody: `Your fictional ${rewardName} reward is ready. Open the RewardLoop app to review eligibility, availability and full terms before claiming.`,
@@ -46,16 +47,6 @@ function stringsOnly(value: unknown): value is GeneratedContent {
   return required.every((key) => typeof (value as Record<string, unknown>)[key] === "string")
 }
 
-function passesGuardrails(content: GeneratedContent, allowedValue: string) {
-  const combined = Object.values(content).join(" ")
-  if (/\b(?:partner[-\s]?funded|rewardloop[-\s]?funded|funding|funded by)\b/i.test(combined)) return false
-  const currencyClaims = combined.match(/\$\s?\d+(?:\.\d{1,2})?(?:\s?\/\s?day)?/g) ?? []
-  const normalizedAllowed = allowedValue.replace(/\s/g, "")
-  return currencyClaims.every((claim) => {
-    const normalized = claim.replace(/\s/g, "")
-    return normalizedAllowed === normalized
-  })
-}
 
 function extractResponseText(value: unknown) {
   if (!value || typeof value !== "object") return undefined
@@ -124,9 +115,9 @@ export async function POST(request: Request) {
     return NextResponse.json({
       content: fallback,
       artwork: {},
-      provider: "Guardrailed fallback",
+      provider: "Template copy",
       imageProvider: "Static reward image",
-      guardrailStatus: "passed",
+      guardrailStatus: "template",
       warning: "OpenAI API key unavailable; approved copy and static reward imagery used.",
     })
   }
@@ -153,33 +144,50 @@ export async function POST(request: Request) {
   }
 
   let content = fallback
-  let provider = "Guardrailed fallback"
+  let provider = "Template copy"
   const warnings: string[] = []
 
   try {
     const model = process.env.OPENAI_MODEL ?? "gpt-5-mini"
-    const response = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
-      body: JSON.stringify({
-        model,
-        instructions: "You write campaign drafts for a fictional rewards-app portfolio. Produce a structured, template-ready poster content specification. Follow the supplied catalogue and guardrails exactly.",
-        input: prompt,
-        text: { format: { type: "json_schema", name: "campaign_content", strict: true, schema } },
-      }),
-    })
-    if (!response.ok) {
-      const detail = await response.text()
-      throw new Error(`OpenAI returned ${response.status}: ${detail.slice(0, 800)}`)
+    let feedback = ""
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const response = await fetch("https://api.openai.com/v1/responses", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+        body: JSON.stringify({
+          model,
+          instructions: "You write campaign drafts for a fictional rewards-app portfolio. Produce a structured, template-ready poster content specification. Follow the supplied catalogue and guardrails exactly.",
+          input: prompt + feedback,
+          reasoning: { effort: "low" },
+          text: { format: { type: "json_schema", name: "campaign_content", strict: true, schema } },
+        }),
+      })
+      if (!response.ok) {
+          throw new Error(`OpenAI request failed (HTTP ${response.status}).`)
+      }
+      const result = await response.json()
+      const text = extractResponseText(result)
+      let parsed: unknown = null
+      try { parsed = text ? JSON.parse(text) : null } catch { /* Retry malformed model output once. */ }
+      const issues = stringsOnly(parsed)
+        ? campaignValidationIssues(parsed, reward.value)
+        : ["Return all required text fields as non-empty strings."]
+      if (issues.length) {
+        if (attempt === 0) {
+          feedback = `\n\nCORRECTIONS REQUIRED\nThe previous draft was rejected: ${issues.join(" ")} Generate a new complete draft using only the approved facts. Keep rationale separate from customer-facing copy.`
+          continue
+        }
+        throw new Error(`AI draft did not pass copy checks after a retry: ${issues.join(" ")}`)
+      }
+      content = parsed as GeneratedContent
+      provider = `OpenAI · ${model}`
+      break
     }
-    const result = await response.json()
-    const text = extractResponseText(result)
-    const parsed = text ? JSON.parse(text) : null
-    if (!stringsOnly(parsed) || !passesGuardrails(parsed, reward.value)) throw new Error("Generated content failed validation")
-    content = parsed
-    provider = `OpenAI · ${model}`
   } catch (error) {
-    warnings.push(`Copy fallback used: ${error instanceof Error ? error.message : "generation error"}`)
+    const message = error instanceof Error ? error.message : "generation error"
+    warnings.push(message.startsWith("AI draft did not pass")
+      ? `${message} Catalogue template shown instead.`
+      : `${message.startsWith("OpenAI request failed") ? message : "AI copy could not be generated."} Catalogue template shown instead.`)
   }
 
   const artwork: ArtworkVariants = {}
@@ -213,8 +221,6 @@ export async function POST(request: Request) {
     warnings.push(message.includes("quota") || message.includes("429")
       ? "OpenAI artwork could not be generated because this project has no available image quota; approved static imagery is shown until billing or quota is enabled."
       : `Artwork fallback used: ${message}`)
-  } else {
-    warnings.push("AI background generation is disabled for this local run; approved static reward imagery is shown.")
   }
 
   await appendRewardLoopEvent({
@@ -227,7 +233,7 @@ export async function POST(request: Request) {
       provider,
       imageProvider,
       artworkVariants: Object.keys(artwork).length,
-      guardrailStatus: "passed",
+      guardrailStatus: provider.startsWith("OpenAI") ? "passed" : "template",
     },
   })
 
@@ -236,7 +242,7 @@ export async function POST(request: Request) {
     artwork,
     provider,
     imageProvider,
-    guardrailStatus: "passed",
+    guardrailStatus: provider.startsWith("OpenAI") ? "passed" : "template",
     warning: warnings.length ? warnings.join(" ") : undefined,
   })
 }
